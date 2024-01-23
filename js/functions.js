@@ -4,15 +4,14 @@
  */
 
 function generateCard(persona) {
-  let cardContent = "";
-  const card = document.createElement("div");
-  card.classList.add("card-custom");
-  for (let attribute in persona) {
-    cardContent += `
-      <span class="attribute text-uppercase d-block">${attribute}</span>
-      <span class="value d-block">${persona[attribute]}</span>
-    `;
-  }
-  card.innerHTML += cardContent;
-  cardsContainer.append(card);
+  // creo l'elemento colonna
+  const col = document.createElement("div");
+  col.classList.add("col-4");
+  col.innerHTML += `
+  <div class="custom-card">
+    <img src="./img/${persona.image}" alt"image ${persona.name}">
+    <h2 class="fs-3">${persona.name}</h2>
+    <h3 class="fs-5">${persona.role}</h2>
+  </div>`;
+  cardsContainer.append(col);
 }

@@ -33,12 +33,9 @@ const team = [
 ];
 
 // HTML elements
-const cardsContainer = document.getElementById("cards-container");
+const cardsContainer = document.getElementById("col-container");
 
 // stampa in console della persona
 for (let persona of team) {
   generateCard(persona);
-  for (let attribute in persona) {
-    console.log(`${attribute}: ` + persona[attribute]);
-  }
 }
