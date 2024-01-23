@@ -1,4 +1,15 @@
+/* !main */
 main {
   height: 100vh;
   background-color: antiquewhite;
+}
+
+#cards-container {
+  margin-top: 100px;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.card-custom {
+  border: 2px dashed darkblue;
 }
